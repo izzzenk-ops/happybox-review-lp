@@ -3,113 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>なつのHAPPY BOXレビュー | THE OTOGIBANASHI SUPPLY</title>
-<meta property="og:title" content="なつのHAPPY BOXレビュー | THE OTOGIBANASHI SUPPLY">
+<title>あきのHAPPY BOXレビュー | THE OTOGIBANASHI SUPPLY</title>
+<meta name="description" content="あきのHAPPY BOXをひと足先に見たレビューメンバー8名のリアルガチレビュー">
+<meta property="og:title" content="あきのHAPPY BOXレビュー | THE OTOGIBANASHI SUPPLY">
 <meta property="og:description" content="今回詰め込むitemをひと足先に公開してリアルガチレビューを書いてもらいました！">
-<meta property="og:image" content="https://izzzenk-ops.github.io/happybox-review-lp/images/hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://izzzenk-ops.github.io/happybox-review-lp/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 <style>
   :root {
-    --yellow: #FFFF01;
-    --pink: #F5AADF;
-    --ink: #1a1a1a;
+    --cream: #F7F0EC;
+    --brown: #3B2A2A;
+    --pink: #F4DCE2;
+    --rose: #C4889A;
+    --ink: #2b2222;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
-    background: #ddd300;
+    background: #e6dad3;
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
     color: var(--ink);
   }
   .lp {
     max-width: 600px;
     margin: 0 auto;
-    background: var(--yellow);
+    background: var(--cream);
     overflow: hidden;
   }
   .lp img { width: 100%; height: auto; display: block; }
 
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    background: var(--brown);
+    color: var(--cream);
+    padding: 56px 22px 52px;
+    text-align: center;
+  }
+  .hero .tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+  }
+  .hero .tags span {
+    border: 1px solid rgba(244, 220, 226, 0.5);
+    border-radius: 999px;
+    padding: 6px 16px;
+    color: var(--pink);
+  }
+  .hero .season {
+    margin-top: 34px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+  }
+  .hero .title {
+    margin-top: 6px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: clamp(54px, 17vw, 96px);
+    line-height: 1.02;
+    color: var(--pink);
+    filter: url(#melt);
+  }
+  .hero .review {
+    margin-top: 14px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.4em;
+    color: var(--rose);
+  }
+  .hero .quote {
+    margin-top: 30px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 17px;
+    opacity: 0.85;
+  }
+  .hero .brand {
+    margin-top: 30px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    color: var(--pink);
+  }
+
   /* ---------- INTRO ---------- */
   .intro {
-    padding: 48px 26px 8px;
+    padding: 44px 26px 8px;
   }
   .intro h2 {
-    font-size: clamp(22px, 6.2vw, 34px);
+    font-size: clamp(21px, 6vw, 32px);
     font-weight: 800;
     text-align: center;
     letter-spacing: 0.02em;
     white-space: nowrap;
+    color: var(--brown);
   }
   .intro h2 .melt {
     font-family: "Archivo Black", sans-serif;
-    color: var(--pink);
+    color: var(--rose);
     filter: url(#melt);
   }
   .intro .lead {
-    margin-top: 28px;
+    margin-top: 26px;
     font-size: 15.5px;
     font-weight: 700;
     line-height: 2;
   }
   .kenji-says {
-    margin: 32px 0 8px;
+    margin: 30px 0 8px;
     font-weight: 800;
     line-height: 1.8;
     text-align: right;
+    color: var(--brown);
   }
   .kenji-says .s1 { font-size: 17px; }
   .kenji-says .big {
     font-size: clamp(38px, 11vw, 52px);
     letter-spacing: 0.04em;
     line-height: 1.3;
-    color: #fff;
-    -webkit-text-stroke: 2px var(--ink);
+    color: var(--pink);
+    -webkit-text-stroke: 2px var(--brown);
     paint-order: stroke fill;
   }
   .kenji-says .s3 { font-size: 15px; }
 
   /* ---------- REVIEWS ---------- */
-  .reviews { padding: 24px 14px 0; }
+  .reviews { padding: 20px 14px 0; }
+  .count {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--rose);
+    letter-spacing: 0.08em;
+  }
   .review-item {
     margin-top: 18px;
-    border-radius: 10px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(59, 42, 42, 0.12);
   }
 
   /* ---------- CLOSING ---------- */
   .closing {
-    padding: 56px 28px 72px;
+    margin-top: 56px;
+    padding: 52px 28px 64px;
     text-align: center;
+    background: var(--brown);
+    color: var(--cream);
   }
   .closing .msg {
     font-size: 16px;
     font-weight: 700;
     line-height: 2;
   }
-  .cta {
-    display: block;
+  .schedule {
     margin: 30px auto 0;
-    max-width: 340px;
-    background: var(--ink);
-    color: var(--yellow);
-    font-size: 18px;
+    max-width: 360px;
+    background: var(--pink);
+    color: var(--brown);
+    border-radius: 18px;
+    padding: 22px 18px;
+  }
+  .schedule .date {
+    font-size: 22px;
     font-weight: 800;
-    text-decoration: none;
-    text-align: center;
-    padding: 18px 10px;
-    border-radius: 999px;
-    letter-spacing: 0.05em;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    letter-spacing: 0.04em;
+  }
+  .schedule .row {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.8;
+  }
+  .schedule .row b {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    margin-right: 6px;
   }
   .closing .brand-foot {
-    margin-top: 48px;
+    margin-top: 44px;
     font-family: "Oswald", sans-serif;
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.12em;
+    color: var(--pink);
   }
 </style>
 </head>
@@ -126,11 +213,18 @@
 <div class="lp">
 
   <!-- ========== HERO ========== -->
-  <img src="images/hero.jpg" alt="なつのHAPPY BOX | THE OTOGIBANASHI SUPPLY" fetchpriority="high">
+  <header class="hero">
+    <div class="tags"><span>JOY</span><span>DEAR</span><span>COLOR</span></div>
+    <p class="season">あきの</p>
+    <h1 class="title">HAPPY<br>BOX</h1>
+    <p class="review">REVIEW</p>
+    <p class="quote">"Be true to yourself."</p>
+    <p class="brand">THE OTOGIBANASHI SUPPLY</p>
+  </header>
 
   <!-- ========== INTRO ========== -->
   <section class="intro">
-    <h2>なつの<span class="melt">HAPPY BOX</span>レビュー</h2>
+    <h2>あきの<span class="melt">HAPPY BOX</span>レビュー</h2>
     <p class="lead">
       今回詰め込むitemをひと足先に公開してリアルガチレビューを書いてもらいました！
     </p>
@@ -144,19 +238,25 @@
 
   <!-- ========== REVIEWS ========== -->
   <section class="reviews">
-    <div class="review-item"><img src="images/review-01.jpg" alt="口コミ1" loading="lazy"></div>
-    <div class="review-item"><img src="images/review-02.jpg" alt="口コミ2" loading="lazy"></div>
-    <div class="review-item"><img src="images/review-03.jpg" alt="口コミ3" loading="lazy"></div>
-    <div class="review-item"><img src="images/review-04.jpg" alt="口コミ4" loading="lazy"></div>
-    <div class="review-item"><img src="images/review-05.jpg" alt="口コミ5" loading="lazy"></div>
-    <div class="review-item"><img src="images/review-06.jpg" alt="口コミ6" loading="lazy"></div>
+    <p class="count">🍂 レビューメンバー8名の声 🍂</p>
+    <div class="review-item"><img src="images/review-01.jpg" alt="レビュー1" loading="lazy"></div>
+    <div class="review-item"><img src="images/review-02.jpg" alt="レビュー2" loading="lazy"></div>
+    <div class="review-item"><img src="images/review-03.jpg" alt="レビュー3" loading="lazy"></div>
+    <div class="review-item"><img src="images/review-04.jpg" alt="レビュー4" loading="lazy"></div>
+    <div class="review-item"><img src="images/review-05.jpg" alt="レビュー5" loading="lazy"></div>
+    <div class="review-item"><img src="images/review-06.jpg" alt="レビュー6" loading="lazy"></div>
+    <div class="review-item"><img src="images/review-07.jpg" alt="レビュー7" loading="lazy"></div>
+    <div class="review-item"><img src="images/review-08.jpg" alt="レビュー8" loading="lazy"></div>
   </section>
 
   <!-- ========== CLOSING ========== -->
   <section class="closing">
     <p class="msg">最高のBOXを用意して待ってます🌹<br>お楽しみに！</p>
-    <!-- ▼ 購入ページ・予約ページのURLが決まったら href を差し替え -->
-    <a class="cta" href="#">HAPPY BOXをチェックする</a>
+    <div class="schedule">
+      <p class="date">10月8日(木) 発売</p>
+      <p class="row"><b>12:00</b>先行100個・1,000円OFF</p>
+      <p class="row"><b>21:00</b>一般発売</p>
+    </div>
     <div class="brand-foot">THE OTOGIBANASHI SUPPLY</div>
   </section>
 
